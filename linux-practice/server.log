@@ -1,0 +1,6 @@
+2026-05-20 06:00 INFO Server started
+2026-05-20 06:05 ERROR Failed login attempt from 192.168.1.1
+2026-05-20 06:10 INFO User felix logged in
+2026-05-20 06:15 ERROR Failed login attempt from 192.168.1.1
+2026-05-20 06:20 WARNING Disk Usage at 85%
+2026-05-20 06:25 ERROR Database connection failed
