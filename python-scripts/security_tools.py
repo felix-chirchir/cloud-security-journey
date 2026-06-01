@@ -38,7 +38,8 @@ def print_finding(finding):
     print("\n=== SECURITY FINDING ===")
     print(f"Title:  {finding['title']}")
     print(f"Severity:   {finding['severity']}")
-    print("Description:    {finding['description']}")
+    print(f"Description:    {finding['description']}")
+    print(f"Fixed:  {finding['fixed']}")
     print("====================")
 
 # ============================================
@@ -72,7 +73,7 @@ findings = [
     {
         "title": "Public S3 Bucket",
         "severity": "CRITICAL",
-        "descritpion": "Customer data exposed to internet",
+        "description": "Customer data exposed to internet",
         "fixed": False
     },
     {
