@@ -1,0 +1,47 @@
+============================================================
+CLOUD SECURITY AUDIT REPORT
+Generated: 2026-06-14:15:04
+Auditor: Felix Chirchir
+============================================================
+
+SUMMARY
+Total findings: 5
+Critical: 2
+High: 2
+Medium: 1
+
+DETAILED FINDINGS
+----------------------------------------
+
+Finding 1:
+  Title:  Public S3 Bucket
+  Severity:   CRITICAL
+  Description:    Customer data bucket is publicly accessible
+  Fixed:  False
+
+Finding 2:
+  Title:  No MFA on Root Account
+  Severity:   CRITICAL
+  Description:    Root account has no MFA enabled
+  Fixed:  False
+
+Finding 3:
+  Title:  Weak IAM Password Policy
+  Severity:   HIGH
+  Description:    Minimum password length is only 6 characters
+  Fixed:  False
+
+Finding 4:
+  Title:  CloudTrail NOt enabled
+  Severity:   HIGH
+  Description:    No audit logging in af-south-1 region
+  Fixed:  True
+
+Finding 5:
+  Title:  Old Access Keys
+  Severity:   MEDIUM
+  Description:    IAM user has access keys older than 90 days
+  Fixed:  False
+
+============================================================
+END OF REPORT

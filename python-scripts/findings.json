@@ -1,0 +1,32 @@
+[
+    {
+        "title": "Public S3 Bucket",
+        "severity": "CRITICAL",
+        "description": "Customer data bucket is publicly accessible",
+        "fixed": false
+    },
+    {
+        "title": "No MFA on Root Account",
+        "severity": "CRITICAL",
+        "description": "Root account has no MFA enabled",
+        "fixed": false
+    },
+    {
+        "title": "Weak IAM Password Policy",
+        "severity": "HIGH",
+        "description": "Minimum password length is only 6 characters",
+        "fixed": false
+    },
+    {
+        "title": "CloudTrail NOt enabled",
+        "severity": "HIGH",
+        "description": "No audit logging in af-south-1 region",
+        "fixed": true
+    },
+    {
+        "title": "Old Access Keys",
+        "severity": "MEDIUM",
+        "description": "IAM user has access keys older than 90 days",
+        "fixed": false
+    }
+]
