@@ -1,0 +1,134 @@
+[
+    {
+        "url": "https://httpbin.org",
+        "status_code": 503,
+        "server": "awselb/2.0",
+        "passed": 0,
+        "failed": 6,
+        "findings": [
+            {
+                "title": "Missing Strict-Transport-Security",
+                "severity": "HIGH",
+                "description": "Forces browsers to use HTTPS only",
+                "risk": "Without this, attackers can downgrade to HTTP",
+                "fixed": false
+            },
+            {
+                "title": "Missing X-Frame-Options",
+                "severity": "HIGH",
+                "description": "Prevents clickjacking attacks",
+                "risk": "Site can be embedded in malicious iframes",
+                "fixed": false
+            },
+            {
+                "title": "Missing X-Content-Type-Options",
+                "severity": "MEDIUM",
+                "description": "Prevents MIME type sniffing",
+                "risk": "Browser may misinterpret file types",
+                "fixed": false
+            },
+            {
+                "title": "Missing Content-Security-Policy",
+                "severity": "HIGH",
+                "description": "Prevents XSS and injection attacks",
+                "risk": "Site vulnerable to cross-site scripting",
+                "fixed": false
+            },
+            {
+                "title": "Missing X-XSS-Protection",
+                "severity": "MEDIUM",
+                "description": "Enables browser XSS filter",
+                "risk": "No browser-level XSS protection",
+                "fixed": false
+            },
+            {
+                "title": "Missing Referrer-Policy",
+                "severity": "LOW",
+                "description": "Controls referrer information",
+                "risk": "Sensitive URLs may leak to third parties",
+                "fixed": false
+            }
+        ]
+    },
+    {
+        "url": "https://safaricom.co.ke",
+        "status_code": 403,
+        "server": "CloudFront",
+        "passed": 1,
+        "failed": 5,
+        "findings": [
+            {
+                "title": "Missing X-Frame-Options",
+                "severity": "HIGH",
+                "description": "Prevents clickjacking attacks",
+                "risk": "Site can be embedded in malicious iframes",
+                "fixed": false
+            },
+            {
+                "title": "Missing X-Content-Type-Options",
+                "severity": "MEDIUM",
+                "description": "Prevents MIME type sniffing",
+                "risk": "Browser may misinterpret file types",
+                "fixed": false
+            },
+            {
+                "title": "Missing Content-Security-Policy",
+                "severity": "HIGH",
+                "description": "Prevents XSS and injection attacks",
+                "risk": "Site vulnerable to cross-site scripting",
+                "fixed": false
+            },
+            {
+                "title": "Missing X-XSS-Protection",
+                "severity": "MEDIUM",
+                "description": "Enables browser XSS filter",
+                "risk": "No browser-level XSS protection",
+                "fixed": false
+            },
+            {
+                "title": "Missing Referrer-Policy",
+                "severity": "LOW",
+                "description": "Controls referrer information",
+                "risk": "Sensitive URLs may leak to third parties",
+                "fixed": false
+            }
+        ]
+    },
+    {
+        "url": "https://google.com",
+        "status_code": 200,
+        "server": "gws",
+        "passed": 2,
+        "failed": 4,
+        "findings": [
+            {
+                "title": "Missing Strict-Transport-Security",
+                "severity": "HIGH",
+                "description": "Forces browsers to use HTTPS only",
+                "risk": "Without this, attackers can downgrade to HTTP",
+                "fixed": false
+            },
+            {
+                "title": "Missing X-Content-Type-Options",
+                "severity": "MEDIUM",
+                "description": "Prevents MIME type sniffing",
+                "risk": "Browser may misinterpret file types",
+                "fixed": false
+            },
+            {
+                "title": "Missing Content-Security-Policy",
+                "severity": "HIGH",
+                "description": "Prevents XSS and injection attacks",
+                "risk": "Site vulnerable to cross-site scripting",
+                "fixed": false
+            },
+            {
+                "title": "Missing Referrer-Policy",
+                "severity": "LOW",
+                "description": "Controls referrer information",
+                "risk": "Sensitive URLs may leak to third parties",
+                "fixed": false
+            }
+        ]
+    }
+]
