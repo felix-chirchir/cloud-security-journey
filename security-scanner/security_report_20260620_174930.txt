@@ -1,0 +1,187 @@
+======================================================================
+PROFESSIONAL SECURITY ASSESSMENT REPORT
+======================================================================
+Report Date:    2026-06-20 17:49:30
+Auditor:        Felix Chirchir
+Tool:           Felix Security Scanner v1.0
+Targets:        4 sites scanned
+======================================================================
+
+EXECUTIVE SUMMARY
+----------------------------------------
+Total sites scanned:          4
+Total security findings:      18
+Sites requiring urgent action: 0
+
+
+DETAILED FINDINGS
+======================================================================
+
+Site 1: https://httpbin.org
+--------------------------------------------------
+HTTP Status:    503
+Server:         awselb/2.0
+Scan Duration:  1.43s
+Risk Score:     22
+Risk Level:     MEDIUM
+Headers Passed: 0/7
+
+Security Findings:
+
+  Finding 1:
+  Title:          Missing Strict-Transport-Security
+  Severity:       HIGH
+  Description:    Forces all connections to use HTTPS
+  Risk:           Attackers can intercept unencrypted HTTP traffic
+  Recommendation: Add: Strict-Transport-Security: max-age=31536000; includeSubDomains
+
+  Finding 2:
+  Title:          Missing X-Frame-Options
+  Severity:       HIGH
+  Description:    Prevents the page from being embedded in iframes
+  Risk:           Clickjacking attacks can trick users into clicking malicious content
+  Recommendation: Add: X-Frame-Options: DENY or SAMEORIGIN
+
+  Finding 3:
+  Title:          Missing X-Content-Type-Options
+  Severity:       MEDIUM
+  Description:    Prevents browsers from guessing the content type
+  Risk:           Browsers may execute malicious files disguised as safe content
+  Recommendation: Add: X-Content-Type-Options: nosniff
+
+  Finding 4:
+  Title:          Missing Content-Security-Policy
+  Severity:       HIGH
+  Description:    Controls which resources the browser is allowed to load
+  Risk:           Cross-site scripting (XSS) attacks can steal user data
+  Recommendation: Add: Content-Security-Policy: default-src 'self'
+
+  Finding 5:
+  Title:          Missing X-XSS-Protection
+  Severity:       MEDIUM
+  Description:    Enables the browser built-in XSS filter
+  Risk:           No browser-level protection against reflected XSS attacks
+  Recommendation: Add: X-XSS-Protection: 1; mode=block
+
+  Finding 6:
+  Title:          Missing Referrer-Policy
+  Severity:       LOW
+  Description:    Controls how much referrer information is shared
+  Risk:           Sensitive URLs and user data may leak to third-party sites
+  Recommendation: Add: Referrer-Policy: strict-origin-when-cross-origin
+
+  Finding 7:
+  Title:          Missing Permissions-Policy
+  Severity:       MEDIUM
+  Description:    Controls which browser features the site can use
+  Risk:           Site may access camera, microphone, or location without restriction
+  Recommendation: Add: Permissions-Policy: geolocation=(), microphone=(), camera=()
+
+
+Site 2: https://safaricom.co.ke
+--------------------------------------------------
+HTTP Status:    403
+Server:         Not disclosed
+Scan Duration:  1.95s
+Risk Score:     17
+Risk Level:     MEDIUM
+Headers Passed: 1/7
+
+Security Findings:
+
+  Finding 1:
+  Title:          Missing X-Frame-Options
+  Severity:       HIGH
+  Description:    Prevents the page from being embedded in iframes
+  Risk:           Clickjacking attacks can trick users into clicking malicious content
+  Recommendation: Add: X-Frame-Options: DENY or SAMEORIGIN
+
+  Finding 2:
+  Title:          Missing X-Content-Type-Options
+  Severity:       MEDIUM
+  Description:    Prevents browsers from guessing the content type
+  Risk:           Browsers may execute malicious files disguised as safe content
+  Recommendation: Add: X-Content-Type-Options: nosniff
+
+  Finding 3:
+  Title:          Missing Content-Security-Policy
+  Severity:       HIGH
+  Description:    Controls which resources the browser is allowed to load
+  Risk:           Cross-site scripting (XSS) attacks can steal user data
+  Recommendation: Add: Content-Security-Policy: default-src 'self'
+
+  Finding 4:
+  Title:          Missing X-XSS-Protection
+  Severity:       MEDIUM
+  Description:    Enables the browser built-in XSS filter
+  Risk:           No browser-level protection against reflected XSS attacks
+  Recommendation: Add: X-XSS-Protection: 1; mode=block
+
+  Finding 5:
+  Title:          Missing Referrer-Policy
+  Severity:       LOW
+  Description:    Controls how much referrer information is shared
+  Risk:           Sensitive URLs and user data may leak to third-party sites
+  Recommendation: Add: Referrer-Policy: strict-origin-when-cross-origin
+
+  Finding 6:
+  Title:          Missing Permissions-Policy
+  Severity:       MEDIUM
+  Description:    Controls which browser features the site can use
+  Risk:           Site may access camera, microphone, or location without restriction
+  Recommendation: Add: Permissions-Policy: geolocation=(), microphone=(), camera=()
+
+
+Site 3: https://google.com
+--------------------------------------------------
+HTTP Status:    200
+Server:         gws
+Scan Duration:  1.42s
+Risk Score:     15
+Risk Level:     MEDIUM
+Headers Passed: 2/7
+
+Security Findings:
+
+  Finding 1:
+  Title:          Missing Strict-Transport-Security
+  Severity:       HIGH
+  Description:    Forces all connections to use HTTPS
+  Risk:           Attackers can intercept unencrypted HTTP traffic
+  Recommendation: Add: Strict-Transport-Security: max-age=31536000; includeSubDomains
+
+  Finding 2:
+  Title:          Missing X-Content-Type-Options
+  Severity:       MEDIUM
+  Description:    Prevents browsers from guessing the content type
+  Risk:           Browsers may execute malicious files disguised as safe content
+  Recommendation: Add: X-Content-Type-Options: nosniff
+
+  Finding 3:
+  Title:          Missing Content-Security-Policy
+  Severity:       HIGH
+  Description:    Controls which resources the browser is allowed to load
+  Risk:           Cross-site scripting (XSS) attacks can steal user data
+  Recommendation: Add: Content-Security-Policy: default-src 'self'
+
+  Finding 4:
+  Title:          Missing Referrer-Policy
+  Severity:       LOW
+  Description:    Controls how much referrer information is shared
+  Risk:           Sensitive URLs and user data may leak to third-party sites
+  Recommendation: Add: Referrer-Policy: strict-origin-when-cross-origin
+
+  Finding 5:
+  Title:          Missing Permissions-Policy
+  Severity:       MEDIUM
+  Description:    Controls which browser features the site can use
+  Risk:           Site may access camera, microphone, or location without restriction
+  Recommendation: Add: Permissions-Policy: geolocation=(), microphone=(), camera=()
+
+
+Site 4: https://equity.co.ke
+Status: SCAN FAILED - Connection failed
+======================================================================
+END OF REPORT
+Generated by Felix Security Scanner
+======================================================================

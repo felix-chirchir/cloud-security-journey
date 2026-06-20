@@ -1,0 +1,179 @@
+{
+    "scan_date": "2026-06-20T17:49:30.443875",
+    "auditor": "Felix Chirchir",
+    "total_sites": 4,
+    "results": [
+        {
+            "url": "https://httpbin.org",
+            "status_code": 503,
+            "server": "awselb/2.0",
+            "duration": 1.426168,
+            "passed": [],
+            "findings": [
+                {
+                    "title": "Missing Strict-Transport-Security",
+                    "severity": "HIGH",
+                    "description": "Forces all connections to use HTTPS",
+                    "risk": "Attackers can intercept unencrypted HTTP traffic",
+                    "recommendation": "Add: Strict-Transport-Security: max-age=31536000; includeSubDomains"
+                },
+                {
+                    "title": "Missing X-Frame-Options",
+                    "severity": "HIGH",
+                    "description": "Prevents the page from being embedded in iframes",
+                    "risk": "Clickjacking attacks can trick users into clicking malicious content",
+                    "recommendation": "Add: X-Frame-Options: DENY or SAMEORIGIN"
+                },
+                {
+                    "title": "Missing X-Content-Type-Options",
+                    "severity": "MEDIUM",
+                    "description": "Prevents browsers from guessing the content type",
+                    "risk": "Browsers may execute malicious files disguised as safe content",
+                    "recommendation": "Add: X-Content-Type-Options: nosniff"
+                },
+                {
+                    "title": "Missing Content-Security-Policy",
+                    "severity": "HIGH",
+                    "description": "Controls which resources the browser is allowed to load",
+                    "risk": "Cross-site scripting (XSS) attacks can steal user data",
+                    "recommendation": "Add: Content-Security-Policy: default-src 'self'"
+                },
+                {
+                    "title": "Missing X-XSS-Protection",
+                    "severity": "MEDIUM",
+                    "description": "Enables the browser built-in XSS filter",
+                    "risk": "No browser-level protection against reflected XSS attacks",
+                    "recommendation": "Add: X-XSS-Protection: 1; mode=block"
+                },
+                {
+                    "title": "Missing Referrer-Policy",
+                    "severity": "LOW",
+                    "description": "Controls how much referrer information is shared",
+                    "risk": "Sensitive URLs and user data may leak to third-party sites",
+                    "recommendation": "Add: Referrer-Policy: strict-origin-when-cross-origin"
+                },
+                {
+                    "title": "Missing Permissions-Policy",
+                    "severity": "MEDIUM",
+                    "description": "Controls which browser features the site can use",
+                    "risk": "Site may access camera, microphone, or location without restriction",
+                    "recommendation": "Add: Permissions-Policy: geolocation=(), microphone=(), camera=()"
+                }
+            ],
+            "risk_score": 22,
+            "risk_level": "MEDIUM",
+            "success": true
+        },
+        {
+            "url": "https://safaricom.co.ke",
+            "status_code": 403,
+            "server": "Not disclosed",
+            "duration": 1.952765,
+            "passed": [
+                "Strict-Transport-Security"
+            ],
+            "findings": [
+                {
+                    "title": "Missing X-Frame-Options",
+                    "severity": "HIGH",
+                    "description": "Prevents the page from being embedded in iframes",
+                    "risk": "Clickjacking attacks can trick users into clicking malicious content",
+                    "recommendation": "Add: X-Frame-Options: DENY or SAMEORIGIN"
+                },
+                {
+                    "title": "Missing X-Content-Type-Options",
+                    "severity": "MEDIUM",
+                    "description": "Prevents browsers from guessing the content type",
+                    "risk": "Browsers may execute malicious files disguised as safe content",
+                    "recommendation": "Add: X-Content-Type-Options: nosniff"
+                },
+                {
+                    "title": "Missing Content-Security-Policy",
+                    "severity": "HIGH",
+                    "description": "Controls which resources the browser is allowed to load",
+                    "risk": "Cross-site scripting (XSS) attacks can steal user data",
+                    "recommendation": "Add: Content-Security-Policy: default-src 'self'"
+                },
+                {
+                    "title": "Missing X-XSS-Protection",
+                    "severity": "MEDIUM",
+                    "description": "Enables the browser built-in XSS filter",
+                    "risk": "No browser-level protection against reflected XSS attacks",
+                    "recommendation": "Add: X-XSS-Protection: 1; mode=block"
+                },
+                {
+                    "title": "Missing Referrer-Policy",
+                    "severity": "LOW",
+                    "description": "Controls how much referrer information is shared",
+                    "risk": "Sensitive URLs and user data may leak to third-party sites",
+                    "recommendation": "Add: Referrer-Policy: strict-origin-when-cross-origin"
+                },
+                {
+                    "title": "Missing Permissions-Policy",
+                    "severity": "MEDIUM",
+                    "description": "Controls which browser features the site can use",
+                    "risk": "Site may access camera, microphone, or location without restriction",
+                    "recommendation": "Add: Permissions-Policy: geolocation=(), microphone=(), camera=()"
+                }
+            ],
+            "risk_score": 17,
+            "risk_level": "MEDIUM",
+            "success": true
+        },
+        {
+            "url": "https://google.com",
+            "status_code": 200,
+            "server": "gws",
+            "duration": 1.424246,
+            "passed": [
+                "X-Frame-Options",
+                "X-XSS-Protection"
+            ],
+            "findings": [
+                {
+                    "title": "Missing Strict-Transport-Security",
+                    "severity": "HIGH",
+                    "description": "Forces all connections to use HTTPS",
+                    "risk": "Attackers can intercept unencrypted HTTP traffic",
+                    "recommendation": "Add: Strict-Transport-Security: max-age=31536000; includeSubDomains"
+                },
+                {
+                    "title": "Missing X-Content-Type-Options",
+                    "severity": "MEDIUM",
+                    "description": "Prevents browsers from guessing the content type",
+                    "risk": "Browsers may execute malicious files disguised as safe content",
+                    "recommendation": "Add: X-Content-Type-Options: nosniff"
+                },
+                {
+                    "title": "Missing Content-Security-Policy",
+                    "severity": "HIGH",
+                    "description": "Controls which resources the browser is allowed to load",
+                    "risk": "Cross-site scripting (XSS) attacks can steal user data",
+                    "recommendation": "Add: Content-Security-Policy: default-src 'self'"
+                },
+                {
+                    "title": "Missing Referrer-Policy",
+                    "severity": "LOW",
+                    "description": "Controls how much referrer information is shared",
+                    "risk": "Sensitive URLs and user data may leak to third-party sites",
+                    "recommendation": "Add: Referrer-Policy: strict-origin-when-cross-origin"
+                },
+                {
+                    "title": "Missing Permissions-Policy",
+                    "severity": "MEDIUM",
+                    "description": "Controls which browser features the site can use",
+                    "risk": "Site may access camera, microphone, or location without restriction",
+                    "recommendation": "Add: Permissions-Policy: geolocation=(), microphone=(), camera=()"
+                }
+            ],
+            "risk_score": 15,
+            "risk_level": "MEDIUM",
+            "success": true
+        },
+        {
+            "url": "https://equity.co.ke",
+            "success": false,
+            "error": "Connection failed"
+        }
+    ]
+}
