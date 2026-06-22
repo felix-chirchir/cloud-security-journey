@@ -1,0 +1,24 @@
+{
+    "account_id": "912392607470",
+    "audit_date": "2026-06-21T10:05:16.850497",
+    "auditor": "Felix Chirchir",
+    "total_findings": 2,
+    "findings": [
+        {
+            "title": "No IAM password policy configured",
+            "severity": "CRITICAL",
+            "current_value": "None",
+            "recommended": "Strong policy required",
+            "description": "Without a password policy users can set weak passwords",
+            "reference": "CIS AWS Benchmark 1.8"
+        },
+        {
+            "title": "MFA not enabled for user: felix-cli",
+            "severity": "HIGH",
+            "current_value": "MFA disabled",
+            "recommended": "MFA enabled",
+            "description": "Without MFA password compromise = account takeover",
+            "reference": "CIS AWS Benchmark 1.10"
+        }
+    ]
+}
